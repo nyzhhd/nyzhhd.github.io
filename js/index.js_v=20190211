@@ -1,0 +1,49 @@
+$(function () {
+    var bigTitle = {
+        reset    : true,
+        origin   : "top",
+        distance : "24px",
+        duration : 1500
+    }
+    var desc = {
+        origin   : "bottom",
+        distance : "64px",
+        duration : 900,
+        delay    : 700
+    }
+    var weappQr = {
+        origin   : "bottom",
+        distance : "64px",
+        duration : 600,
+        delay    : 1000
+    }
+    var imgCenter = {
+        origin   : "bottom",
+        distance : "100px",
+        duration : 600,
+        delay    : 1500
+    }
+    var imgSlider = {
+        origin   : "bottom",
+        distance : "200px",
+        duration : 600,
+        delay    : 1600
+    }
+    window.sr = new ScrollReveal()
+    sr.reveal(".big-title", bigTitle)
+    sr.reveal(".desc", desc)
+    sr.reveal(".weapp-qr", weappQr)
+    sr.reveal(".img-center", imgCenter)
+    sr.reveal(".img-slider", imgSlider)
+    $.ajax({
+        type: "get",
+        url: "https://wechat.sangsir.com/timetable/api.php?action=count",
+        dataType: "json",
+        success: function(data){
+            $('#kb_count').text(parseInt(data[15].counts) + parseInt(data[16].counts));
+            $('#room_count').text(data[9].counts);
+            $('#lib_count').text(parseInt(data[0].counts) + parseInt(data[1].counts) + parseInt(data[2].counts));
+            $('#exam_count').text(data[8].counts);
+        }
+    });
+});

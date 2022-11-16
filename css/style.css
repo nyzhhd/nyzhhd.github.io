@@ -1,0 +1,78 @@
+body, html {
+    min-height: 100%;
+    background: #1a2434;
+    color: #b0b6c1;
+    font-family: 'PingFang SC', 'Microsoft YaHei', "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+    color: #ff7055;
+    outline: 0
+}
+a:active, a:focus, a:hover {
+    text-decoration: none;
+    color: #eb5055;
+    outline: 0
+}
+.section p {
+    font-size: 1.8rem;
+    word-break: break-all;
+}
+#particles-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.jumbotron {
+    padding-top: 8vw;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background: #1a2434;
+}
+.jumbotron h1, .section h1, .section h2 {
+    color: #FFF;
+}
+.jumbotron .weapp {
+    font-weight: 700;
+    color: #fff;
+    padding: 16px;
+    -webkit-transition: .3s color ease-out;
+    transition: .3s color ease-out;
+}
+.jumbotron .weapp-qr {
+    padding-bottom: 30px;
+}
+.jumbotron .weapp:link, .jumbotron .weapp:visited {
+    background: #1a2434;
+    color: inherit;
+    -webkit-transition: .2s all ease-out;
+    transition: .2s all ease-out;
+}
+.jumbotron .weapp:active, .jumbotron .weapp:hover {
+    color: #1a2434;
+    background: #fff;
+    border-radius: 4px;
+}
+#weapp-qr img {
+    margin: 20px 0;
+    width: 200px;
+    height: auto;
+}
+.banner img {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.section {
+    padding: 5vw 0 5vw;
+}
+.light-dark {
+    background-color: #3f5579;
+}
+.container .title {
+    padding-bottom: 3vw;
+}
