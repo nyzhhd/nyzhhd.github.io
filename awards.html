@@ -4,42 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>获奖经历</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 20px;
             background-color: #f8f9fa;
+            scroll-behavior: smooth;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             background-color: #fff;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #4CAF50, #2196F3, #FFC107);
+            opacity: 0.1;
+            z-index: -1;
+            border-radius: 10px;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #2c3e50;
             margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            padding: 5px 10px;
+            color: #3498db;
+            text-decoration: none;
+            border: 1px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #3498db;
+            color: #fff;
         }
         h2 {
             color: #444;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
             margin-top: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 12px;
             text-align: left;
+            transition: background-color 0.3s;
         }
         th {
             background-color: #f2f2f2;
@@ -51,13 +95,31 @@
         tr:hover {
             background-color: #f1f1f1;
         }
+        .award-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #666;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav>
+            <a href="#competition-awards">竞赛奖项</a>
+            <a href="#scholarships-honors">奖学金及其他荣誉</a>
+        </nav>
         <h1>获奖经历</h1>
+        <p class="intro">以下是我在学习和研究过程中获得的一些奖项和荣誉。</p>
         
-        <h2>竞赛奖项</h2>
+        <h2 id="competition-awards">竞赛奖项</h2>
+        <img src="images/642.gif" alt="Trophy" class="award-icon">
         <table>
             <thead>
                 <tr>
@@ -110,7 +172,8 @@
             </tbody>
         </table>
         
-        <h2>奖学金及其他荣誉</h2>
+        <h2 id="scholarships-honors">奖学金及其他荣誉</h2>
+        <img src="images/640.gif" alt="Medal" class="award-icon">
         <table>
             <thead>
                 <tr>

@@ -29,6 +29,12 @@ E-mail: yujiangshui@gmail.com
  border: 1px solid #ddd;
  position: relative;
 }
+.award-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
 .con2 img{
      position: absolute;
