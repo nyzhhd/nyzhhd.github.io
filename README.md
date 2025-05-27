@@ -11,5 +11,3 @@ wcz个人网页简历的源代码。在线地址：<http://nyzhhd.github.io>
 **请不要在任何场合使用此项目中本人的照片。**
 
 本文参照了于江水<https://github.com/yujiangshui/about-me>大佬的作品，非常感谢！！！
-
-
