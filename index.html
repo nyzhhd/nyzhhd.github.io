@@ -5,6 +5,10 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" />	
 	<title>关于 王超泽</title>
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/lucide@latest"></script>
 	<link rel="stylesheet" href="./style.css" type="text/css" media="all" />
 	<link rel="shortcut icon" href="./images/tou.jpg"/>
 </head>
@@ -12,55 +16,63 @@
 <div class="loading">
 	<div class="loading-circle"></div>
 	<div class="loading-avatar"><img src="./images/me2.jpg" alt="" width="100" height="100"></div>
-	<div class="loading-info">正在努力加载中...</div>
+	<div class="loading-info" data-i18n="loading_text">正在努力加载中...</div>
 </div>
 <div class="section-header">
-	<div class="section">
-		<nav class="nav" role="navigation">
-			<ul>
-				<li class="nav-about fade fade1"><a href="#about">关于</a></li>
-				<li class="nav-works fade fade4"><a href="#works">项目</a></li>
-				<li class="fade back-home"><a href="#top">首页</a></li>
-				<li class="nav-skill fade fade2"><a href="#skill">能力</a></li>
-				<li class="nav-contact fade fade3"><a href="#contact">联系</a></li>
-			</ul>
-		</nav>
-	</div>
-	<div class="nav-bg"></div>
+	<nav class="nav" role="navigation">
+		<div class="nav-left">
+			<div class="back-home fade">
+				<a href="#top" data-i18n="nav_home">首页</a>
+			</div>
+		</div>
+		<ul class="nav-menu">
+			<li class="nav-about fade fade1"><a href="#about" data-i18n="nav_about">关于</a></li>
+			<li class="nav-works fade fade2"><a href="#works" data-i18n="nav_works">项目</a></li>
+			<li class="nav-internships fade fade3"><a href="#internships" data-i18n="nav_internships">实习</a></li>
+			<li class="nav-skill fade fade4"><a href="#skill" data-i18n="nav_skill">能力</a></li>
+			<li class="nav-papers fade fade5"><a href="#papers" data-i18n="nav_papers">成果</a></li>
+			<li class="nav-contact fade fade6"><a href="#contact" data-i18n="nav_contact">联系</a></li>
+		</ul>
+		<div class="nav-right">
+			<button class="lang-toggle" aria-label="切换语言">EN</button>
+			<button class="theme-toggle" aria-label="切换主题"></button>
+		</div>
+	</nav>
 </div>
-<div class="home-bg">
-	<img src="images/home2.png" alt="" width="1000" height="667">
-</div>
-<div class="section-wrap section-fristpage">
+<div class="section-wrap section-fristpage" id="top">
 	<div class="section">
 		<div class="section-content">
-			<p class="fade fade1">Hi，我是 王超泽</p>
-			<p class="fade fade2">我的专业是控制科学与工程，智能机器人方向 ~</p>
-			<p class="fade fade3">想了解更多，往下滚动哦 ^_^</p>
+			<div class="home-avatar fade fade1">
+				<img src="./images/me2.jpg" alt="Wang Chaoze" width="120" height="120">
+			</div>
+			<p class="fade fade1" data-i18n="home_hi">Hi，我是 王超泽</p>
+			<p class="fade fade2" data-i18n="home_title">控制科学与工程 · 2026届硕士毕业生</p>
+			<p class="fade fade3" data-i18n="home_focus">专注于 AI 感知、大模型应用 (RAG/Agent) 与机器人多模态操控</p>
 		</div>
-		<a href="#" class="scroll-tip fade fade4">向下滚动</a>
+		<div class="scroll-indicator fade fade4" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+			<i data-lucide="chevron-down"></i>
+		</div>
 	</div>
 </div>
 <div id="about" class="section-wrap section-about">
 	<div class="section">
 		<div class="about-content clearfix section-content">
 			<div class="left">
-				<h1>关于本人</h1>
-				<p class="fade fade3"><a href="study.html" target="_blank">论文成果</a> & <a href="awards.html" target="_blank">获奖经历</a> </p>
-				<p class="fade fade1">2019 年考入中南大学交通院，学习自动化类专业</p>
-				<p class="fade fade3">在<a href="https://stte.csu.edu.cn/kp/jdjs/zndxgslcyjzxjs.htm" target="_blank">高速列车研究中心教育部重点实验室</a>完成毕设</p>
-				<p class="fade fade2">2022 年确定保研至华中科技大学</p>
-				<p class="fade fade2">学习控制科学与工程专业，方向为智能机器人</p>
-				<p class="fade fade2">在<a href="https://aia.hust.edu.cn/" target="_blank">人工智能与自动化学院</a></p>
-				<p class="fade fade2">& <a href="https://aia.hust.edu.cn/info/1199/8367.htm" target="_blank">图像信息处理与智能控制教育部重点实验室</a></p>
-				<p class="fade fade2">& 自主智能无人系统教育部工程研究中心</p>
-				<p class="fade fade2">& 智能机器人实验室</p>
-				<p class="fade fade3">断续写博客 <a href="https://blog.csdn.net/m0_51738372" target="_blank">石去皿</a> 15.9k+粉丝 ，520k+阅读量</p>
-				<!--<p class="fade fade4"><a href="http://www.haohaoxuexitiantianxiangshang.com" target="_blank">好好学习天天向上</a> 开发者</p>
-				<p class="fade fade5"><a href="http://deepdevelop.com" target="_blank">Deepdevelop</a> 兼职前端工程师</p>          -->
-				<p class="fade fade6">MEAAC2025、<a href=".\ccdc2025\ccdcreview.pdf" target="_blank">CCDC2026审稿人</a>。</p> 
-				<p class="fade fade6">目前在进行能力巩固，为2026年硕士毕业工作做准备。</p> 
-				
+				<h1 data-i18n="about_title">关于本人</h1>
+				<p class="fade fade3"><i data-lucide="award" style="vertical-align: -4px; width: 20px; margin-right: 4px;"></i> <a href="#papers" data-i18n="about_papers">论文成果</a> & <a href="#awards" data-i18n="about_awards">获奖经历</a> </p>
+				<div class="timeline">
+					<div class="timeline-item fade fade1">
+						<span class="time">2019 - 2023</span>
+						<p data-i18n="about_timeline_1">考入<strong>中南大学</strong>交通院，自动化专业。在<a href="https://stte.csu.edu.cn/kp/jdjs/zndxgslcyjzxjs.htm" target="_blank">高速列车研究中心</a>教育部重点实验室完成毕设。</p>
+					</div>
+					<div class="timeline-item fade fade2">
+						<span class="time">2023 - 至今</span>
+						<p data-i18n="about_timeline_2">保研至<strong>华中科技大学</strong>，控制科学与工程专业（智能机器人方向）。在 <a href="https://aia.hust.edu.cn/" target="_blank">人工智能与自动化学院</a> 及图像信息处理与智能控制教育部重点实验室学习。</p>
+					</div>
+				</div>
+				<p class="fade fade3" data-i18n="about_blog">博客 <a href="https://blog.csdn.net/m0_51738372" target="_blank">石去皿</a> 15.9k+ 粉丝，520k+ 阅读量。</p>
+				<p class="fade fade6" data-i18n="about_reviewer">MEAAC2025、NCAA、<a href=".\ccdc2025\ccdcreview.pdf" target="_blank">CCDC2026 审稿人</a></p> 
+				<p class="fade fade7" data-i18n="home_future">2026年毕业后将加入华为工作，继续从事 AI 和软件开发。</p> 
 			</div>
 			<div class="right">
 			<!--<img class="my-photo fade fade4" src="https://s2.loli.net/2022/11/19/dul35R4grsOGivc.jpg" alt="" width="381" height="540">-->	
@@ -72,63 +84,88 @@
 <div id="works" class="section-wrap section-works">
 	<div class="section">
 		<div class="works-content section-content">
-			<h1>近期工作</h1>
-			<div class="works-list clearfix">
-				<div class="works-item first fade fade1"><!---->
+			<h1 data-i18n="works_title">近期工作</h1>
+			<div class="works-list">
+				<div class="works-item fade fade1">
 					<a href="https://www.bilibili.com/video/BV18G4y1677E/?share_source=copy_web&vd_source=0b92bad65f9394c9bc353f5990339626" target="_blank">
-						<img src="images/works/ai.webp" alt="" width="300" height="180">
+						<img src="images/works/ai.webp" alt="AI帮写检讨书">
 						<div class="work-info">
-							<h2>AI帮写检讨书</h2>
-							<p><strong>开发时间</strong>：2022年8月<br>
-							<strong>工作详情</strong>：AI帮写检讨书、微信小程序、QQ微信均可搜索到、或者微信QQ扫描以上小程序码、免费复制、任选主题字数的检讨书、议论文生成，目前用户近25万。</p>
+							<h2 data-i18n="work_jts_title">AI帮写检讨书</h2>
+							<p data-i18n="work_jts_desc">微信小程序/QQ小程序。基于 Flask + asyncio + Redis 构建，采用 Hypercorn + Nginx 部署。累计用户 25W+。</p>
 						</div>
 					</a>
 				</div>
 				<div class="works-item fade fade2">
 					<a href="https://ai.suink.cn/" target="_blank">
-						<img src="images/works/jts.webp" alt="" width="300" height="180">
+						<img src="images/works/jts.webp" alt="AI帮写检讨书官网">
 						<div class="work-info">
-							<h2>AI帮写检讨书官网</h2>
-							<p><strong>开发时间</strong>：2022年11月<br>
-							<strong>工作详情</strong>：为了AI帮写检讨书微信小程序更好的发展，我们开发与部署了该网页，用于宣传展示。</p>
+							<h2 data-i18n="work_jts_web_title">AI帮写检讨书官网</h2>
+							<p data-i18n="work_jts_web_desc">为小程序提供品牌展示与宣传的官方站点，展示产品功能与核心优势。</p>
 						</div>
 					</a>
 				</div>
-				
-				<div class="works-item fade fade4">
+				<div class="works-item fade fade3">
 					<a href="https://baijiahao.baidu.com/s?id=1815300856745423989&wfr=spider&for=pc" target="_blank">
-						<img src="images/works/gt.jpg" alt="" width="300" height="180">
+						<img src="images/works/gt.jpg" alt="高铁智能巡检机器人">
 						<div class="work-info">
-							<h2>高铁动车组智能巡检机器人</h2>
-							<p><strong>开发时间</strong>：2022年10月 - 至今<br>
-							<strong>工作详情</strong>：通过集成感知-操作一体化技术，实现对轨道交通车辆关键部件的自动检测和缺陷识别。负责AI服务器管理软件开发，参与基于PyQt开发的AI巡检服务器软件的改进与维护。</p>
+							<h2 data-i18n="work_robot_title">高铁智能巡检机器人</h2>
+							<p data-i18n="work_robot_desc">基于改进型 Deformable DETR 与 2D/3D 点云配准算法，实现对转向架部件的精密缺陷检测，并采用 Ray 分布式框架优化检测流程。</p>
 						</div>
 					</a>
 				</div>
-            <!-- https://mp.weixin.qq.com/s?__biz=MjM5MTAyOTQ3MA==&mid=2650018679&idx=1&sn=594d82e847a95ae537d0e40e6a531bb7&chksm=bebb72c689ccfbd08b0769db4115474bd5629d3a054c11df6ad915b1cc2735c968abbf68d87d&scene=126&sessionid=1741245013#rd -->
-				<div class="works-item first fade fade3">
+				<div class="works-item fade fade4">
 					<a href="https://www.bilibili.com/video/BV17yXKYQEgR/?vd_source=ec03431b7280c0db28aa47bc68819492" target="_blank">
-						<img src="images/wl.jpeg" alt="" width="300" height="180">
+						<img src="images/wl.jpeg" alt="智能编组围栏系统">
 						<div class="work-info">
-							<h2>智能编组围栏系统</h2>
-							<p><strong>开发时间</strong>：2022年7月-2023年9月<br>
-							<strong>工作详情</strong>：由人划线，围栏自动运动排列到所划线的位置。利用RT_Thread系统进行调度，并采用UWB进行定位，惯导获取姿态，LORA完成远距离通信。我的贡献主要在于单片机和传感器使用、机械组装、操作系统、通信等。</p>
+							<h2 data-i18n="work_fence_title">智能编组围栏系统</h2>
+							<p data-i18n="work_fence_desc">基于 RT-Thread 实时系统、UWB 定位与 LoRa 通信，结合 XGBoost 模型预测人流，实现围栏系统的自动排列与编组。</p>
 						</div>
 					</a>
 				</div>
-
-				<div class="works-item fade fade2">
+				<div class="works-item fade fade5">
 					<a href="https://www.bilibili.com/video/BV1Mbo2YfEC7/?vd_source=ec03431b7280c0db28aa47bc68819492" target="_blank">
-						<img src="images/jxb.jpg" alt="" width="300" height="180">
+						<img src="images/jxb.jpg" alt="机械臂感知与规划">
 						<div class="work-info">
-							<h2>机械臂感知与规划</h2>
-							<p><strong>开发时间</strong>：2024年7月-至今<br>
-							<strong>工作详情</strong>：桌面机器人（分拣元器件）。清洗机器人（清洗转向架污迹）。双臂机器人（用工具拧螺栓）。巡检机器人(采集数据)。</p>
+							<h2 data-i18n="work_arm_title">机械臂感知与规划</h2>
+							<p data-i18n="work_arm_desc">涉及元器件分拣（DiffDDet）、污迹清洗（YOLOv7+遗传算法）及双臂协作（Qwen2.5-VL+Diffusion Policy）等任务。</p>
 						</div>
 					</a>
 				</div>
-			</div>  
-			<a class="more-link" href="https://blog.csdn.net/m0_51738372">查看博客</a>
+			</div>
+			<div style="text-align: center; margin-top: 3rem;">
+				<a class="more-link" href="https://blog.csdn.net/m0_51738372" style="background: var(--primary-color); color: #fff; padding: 0.75rem 2rem; border-radius: 99px; font-weight: 600;">更多动态见 CSDN 博客</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="internships" class="section-wrap section-internships">
+	<div class="section">
+		<div class="internships-content section-content">
+			<h1 data-i18n="internships_title">实习经历</h1>
+			<div class="internships-list">
+				<div class="internship fade fade1">
+					<div class="intern-header">
+						<h2 data-i18n="intern_haina_title">临沂海纳电子 · 软件开发工程师</h2>
+						<span class="intern-time">2025.06</span>
+					</div>
+					<p data-i18n="intern_haina_desc">负责 RK3588 Linux 嵌入式开发，实现 4D 毫米波雷达与相机融合，并部署 YOLO、DeepSeek 等 AI 模型至 NPU。</p>
+				</div>
+				<div class="internship fade fade2">
+					<div class="intern-header">
+						<h2 data-i18n="intern_mobile_title">中国移动 · 算法开发</h2>
+						<span class="intern-time">2025.07</span>
+					</div>
+					<p data-i18n="intern_mobile_desc">研究基于 RAG + Prompt Engineering 的 NL2SQL 转换优化，利用 LangChain 构建 ReAct Agent 实现自我纠错。</p>
+				</div>
+				<div class="internship fade fade3">
+					<div class="intern-header">
+						<h2 data-i18n="intern_fsdi_title">中铁四院 · 人工智能组</h2>
+						<span class="intern-time">2025.08</span>
+					</div>
+					<p data-i18n="intern_fsdi_desc">主导 rag4chat 企业级 RAG 系统开发，集成 OCR 与 LLaVA 处理非结构化数据，并基于 Agno 框架开发轻量化 Agent。</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -136,85 +173,349 @@
 <div id="skill" class="section-wrap section-skill">
 	<div class="section">
 		<div class="skill-content section-content">
-			<h1>技能水平</h1>
-			<ul>
-				<!-- 第一组：编程与系统基础 -->
-				<li class="fade fade1">熟练使用 C/C++ 和 Python 进行高性能与 AI 开发。</li>
-				<li class="fade fade1">熟练掌握 Linux 与 Windows 开发环境，熟悉 git 版本控制工具。熟悉 QT 框架，具备桌面端人机交互界面开发能力。</li>
-			
-			  
-				<!-- 第二组：图像与点云处理 -->
-				<li class="fade fade2">熟悉 OpenCV、PCL 等计算机视觉与点云处理库。</li>
-				<li class="fade fade2">掌握基本的数字图像处理与 3D 点云滤波、配准、分割方法。</li>
-				<li class="fade fade2">熟悉基于 2D/3D 图像的深度学习与传统方法的缺陷检测。</li>
-				<li class="fade fade2">熟悉 PyTorch 框架，了解深度学习原理，掌握分类、检测、分割等基础模型。</li>
-				
-			  
-				<!-- 第三组：机器人与嵌入式 -->
-				<li class="fade fade3">使用过 STM32、图为、RK3588 等嵌入式平台进行开发。</li>
-				<li class="fade fade3">熟悉机械臂基本原理，了解手眼标定与运动规划方法。了解 ROS、RT-Thread 等机器人操作系统。</li>
-				<li class="fade fade3">了解 Diffusion Policy、VLA 等前沿机械臂与移动机器人操控架构。</li>
-				<li class="fade fade3">了解网络通信与操作系统基础，熟悉 TCP/IP 协议栈。</li>
-			  
-				<!-- 第四组：Web 与大模型 -->
-				<li class="fade fade4">了解 Web 前后端开发，熟悉 Vue.js、Flask 等框架。</li>
-				<li class="fade fade4">使用 JavaScript 和 CSS 开发过网页与小程序，累计用户 25w+。</li>
-				<li class="fade fade4">了解数据库技术，使用 MySQL、Redis, 开发过 NL2SQL 功能。</li>
-				<li class="fade fade4">具备大模型应用经验，实践过 Agent 与 RAG 架构，熟悉 LangChain、Agno、openManus 等工具。</li>
-				<!-- <li class="fade fade4">对用户体验与交互设计有持续关注与追求。</li> -->
-			  </ul>
+			<h1 data-i18n="skill_title">技能水平</h1>
+			<div class="skill-groups">
+				<div class="skill-group fade fade1">
+					<div class="group-header">
+						<i data-lucide="eye"></i>
+						<h2 data-i18n="skill_ai">AI 感知与视觉</h2>
+					</div>
+					<ul>
+						<li data-i18n="skill_ai_1"><strong>视觉感知</strong>：改进型 Deformable DETR、YOLO 系列、Segment Anything (SAM) 等。</li>
+						<li data-i18n="skill_ai_2"><strong>多模态大模型</strong>：RAG (Retrieval-Augmented Generation)、Prompt Engineering、Agno/LangChain Agent 开发。</li>
+						<li data-i18n="skill_ai_3"><strong>3D 视觉</strong>：2D/3D 点云配准、位姿估计 (6D Pose)、深度图补全 (Depth Completion)。</li>
+					</ul>
+				</div>
+				<div class="skill-group fade fade2">
+					<div class="group-header">
+						<i data-lucide="cog"></i>
+						<h2 data-i18n="skill_robot">机器人规划与控制</h2>
+					</div>
+					<ul>
+						<li data-i18n="skill_robot_1"><strong>运动规划</strong>：扩散模型 (Diffusion Policy)、端到端多模态操控模型 (VLA)、遗传算法路径优化。</li>
+						<li data-i18n="skill_robot_2"><strong>控制算法</strong>：PID、MPC 控制、精密机械臂抓取与装配任务规划。</li>
+						<li data-i18n="skill_robot_3"><strong>分布式框架</strong>：Ray 分布式计算框架、ROS/ROS2 机器人操作系统。</li>
+					</ul>
+				</div>
+				<div class="skill-group fade fade3">
+					<div class="group-header">
+						<i data-lucide="code"></i>
+						<h2 data-i18n="skill_fullstack">全栈开发与工程</h2>
+					</div>
+					<ul>
+						<li data-i18n="skill_fullstack_1"><strong>后端开发</strong>：Python (Flask/FastAPI/asyncio)、Redis、Nginx 部署、Linux 嵌入式开发 (RK3588)。</li>
+						<li data-i18n="skill_fullstack_2"><strong>前端与移动端</strong>：微信/QQ 小程序原生开发、Vue.js、响应式网页设计。</li>
+						<li data-i18n="skill_fullstack_3"><strong>嵌入式系统</strong>：RT-Thread 实时操作系统、UWB 定位、LoRa 无线通信、NPU 算力部署。</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+<!-- Papers Section -->
+<div id="papers" class="section-wrap section-papers">
+	<div class="section">
+		<div class="papers-content section-content">
+			<h1 data-i18n="papers_title">论文成果</h1>
+			<div class="paper-list">
+				<div class="paper fade fade1">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] An EMU Bogie Defect Detection Method Based on Similarity Comparison</h3>
+						<p class="paper-authors"><strong>First Author</strong></p>
+						<p class="paper-meta">Conference: <a href="https://www.cac2024.org/" target="_blank">CAC2024</a> <span class="highlight">(最佳论文候选)</span></p>
+						<div class="paper-links">
+							<a href="https://ieeexplore.ieee.org/document/10864524/" target="_blank"><i data-lucide="external-link"></i> IEEE Xplore</a>
+						</div>
+					</div>
+					<div class="paper-time">2024</div>
+				</div>
+
+				<div class="paper fade fade2">
+					<div class="paper-status accepted">Oral</div>
+					<div class="paper-content">
+						<h3>[Paper] Diffusion Model-based Directional Target Detection for Robotic Sorting Task</h3>
+						<p class="paper-authors"><strong>First Author</strong></p>
+						<p class="paper-meta">Conference: <a href="http://www.ccdc.neu.edu.cn/" target="_blank">CCDC2025</a></p>
+						<div class="paper-links">
+							<a href=".\ccdc2025\MonD10-6.html" target="_blank"><i data-lucide="file-text"></i> PDF</a>
+						</div>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade3">
+					<div class="paper-status review">Major Revision</div>
+					<div class="paper-content">
+						<h3>[Paper] High-Speed Train Bogie Component Detection Network with Dual-Branch Architecture Based on Tensor Fusion of Prior Structural Knowledge</h3>
+						<p class="paper-authors"><strong>Corresponding Author</strong></p>
+						<p class="paper-meta">Journal: <a href="https://link.springer.com/journal/521" target="_blank">Neural Computing and Applications</a></p>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade4">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] Detection of EMU Components Based on Optical Flow Attention Prior and Multi-modal RGBD RTDETR</h3>
+						<p class="paper-authors"><strong>Fifth Author</strong></p>
+						<p class="paper-meta">Conference: <a href="https://2026.ieee-icra.org/" target="_blank">ICRA2026</a></p>
+					</div>
+					<div class="paper-time">2026</div>
+				</div>
+
+				<div class="paper fade fade5">
+					<div class="paper-status review">Under Review</div>
+					<div class="paper-content">
+						<h3>[Paper] Research on Docking Planning of Charging Port Based on Depth Vision and Force Sense</h3>
+						<p class="paper-authors"><strong>Corresponding Author</strong></p>
+						<p class="paper-meta">Conference: <a href="https://www.sciencedirect.com/journal/measurement" target="_blank">Measurement</a></p>
+						<div class="paper-links">
+							<a href="https://doi.org/10.2139/ssrn.6205802" target="_blank"><i data-lucide="external-link"></i> SSRN</a>
+						</div>
+					</div>
+					<div class="paper-time">2026</div>
+				</div>
+
+				<div class="paper fade fade1">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] CLS-GatedFusion: Class Token Controlled Cross-Attention for Multimodal Action Recognition</h3>
+						<p class="paper-authors"><strong>Fourth Author</strong></p>
+						<p class="paper-meta">Conference: <a href="http://www.ccdc.neu.edu.cn/" target="_blank">CCDC2026</a></p>
+					</div>
+					<div class="paper-time">2026</div>
+				</div>
+
+				<div class="paper fade fade2">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] Hierarchical Multi-Array Tactile Representation Learning and Diffusion Policy for Real-World Dexterous Placement Tasks</h3>
+						<p class="paper-authors"><strong>Third Author</strong></p>
+						<p class="paper-meta">Conference: <a href="http://www.ccdc.neu.edu.cn/" target="_blank">CCDC2026</a></p>
+					</div>
+					<div class="paper-time">2026</div>
+				</div>
+
+				<div class="paper fade fade3">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] ICDC: Guided Interpolation and Correction with Depth Estimation Prior for Depth Completion</h3>
+						<p class="paper-authors"><strong>Fifth Author</strong></p>
+						<p class="paper-meta">Conference: <a href="http://www.ccdc.neu.edu.cn/" target="_blank">CCDC2026</a></p>
+					</div>
+					<div class="paper-time">2026</div>
+				</div>
+
+				<div class="paper fade fade4">
+					<div class="paper-status accepted">Published</div>
+					<div class="paper-content">
+						<h3>[Paper] Motion Planning of Cleaning Robot Based on 3D Vision</h3>
+						<p class="paper-authors"><strong>Third Author</strong></p>
+						<p class="paper-meta">Journal: <a href="https://journals.sagepub.com/home/sci" target="_blank">Science Progress</a></p>
+						<div class="paper-links">
+							<a href="https://pubmed.ncbi.nlm.nih.gov/41284775/" target="_blank"><i data-lucide="external-link"></i> PubMed</a>
+						</div>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade5">
+					<div class="paper-status review">Under Review</div>
+					<div class="paper-content">
+						<h3>[Paper] The Multimodal Defect Detection Based on Position-Prior for Smart High-Speed Railway Inspection</h3>
+						<p class="paper-authors"><strong>Third Author</strong></p>
+						<p class="paper-meta">Journal: <a href="https://link.springer.com/journal/521" target="_blank">Neural Computing and Applications</a></p>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade1">
+					<div class="paper-status accepted">Oral</div>
+					<div class="paper-content">
+						<h3>[Paper] OC-DETR: DETR with Orthogonal Channel Attention and CSPO-Fusion for component detection of TEDS</h3>
+						<p class="paper-authors"><strong>Third Author</strong></p>
+						<p class="paper-meta">Conference: <a href="http://www.ccdc.neu.edu.cn/" target="_blank">CCDC2025</a></p>
+						<div class="paper-links">
+							<a href=".\ccdc2025\SunD10-2.html" target="_blank"><i data-lucide="file-text"></i> PDF</a>
+						</div>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade2">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] 基于深度学习的动车组转向架螺栓缺陷检测</h3>
+						<p class="paper-authors"><strong>Fourth Author</strong></p>
+						<p class="paper-meta">Conference: <a href="https://www.icgnc2024.org/" target="_blank">ICGNC2024</a></p>
+						<div class="paper-links">
+							<a href=".\ccdc2025\0796.pdf" target="_blank"><i data-lucide="file-text"></i> PDF</a>
+						</div>
+					</div>
+					<div class="paper-time">2024</div>
+				</div>
+
+				<div class="paper fade fade3">
+					<div class="paper-status review">Under Review</div>
+					<div class="paper-content">
+						<h3>[Paper] EMU Bogie Bolt Defect Detection by Combining Depth Information and Depth-WS-DAN</h3>
+						<p class="paper-authors"><strong>Fourth Author</strong></p>
+						<p class="paper-meta">Journal: <a href="https://ieee-itss.org/pub/t-its/" target="_blank">IEEE Transactions on Intelligent Transportation Systems</a></p>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade4">
+					<div class="paper-status review">Under Review</div>
+					<div class="paper-content">
+						<h3>[Paper] Localization and Defect Detection of Anti-loosening Iron Wire in High Speed Train Based on SSP-T with Mask Matrix and Deformable Convolution</h3>
+						<p class="paper-authors"><strong>Fifth Author</strong></p>
+						<p class="paper-meta">Journal: <a href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence" target="_blank">Engineering Applications of Artificial Intelligence</a></p>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade5">
+					<div class="paper-status accepted">Accepted</div>
+					<div class="paper-content">
+						<h3>[Paper] 数智时代营商环境法治化评估的智能实现路径</h3>
+						<p class="paper-authors"><strong>Second Author</strong></p>
+						<p class="paper-meta">Conference: <a href="https://mp.weixin.qq.com/s/XcgtcdPZkjrgjX0sHlprpA" target="_blank">法治中国·湘江论坛</a></p>
+					</div>
+					<div class="paper-time">2025</div>
+				</div>
+
+				<div class="paper fade fade1">
+					<div class="paper-status accepted">Patent</div>
+					<div class="paper-content">
+						<h3>[专利] 一种融合先验结构知识的部件目标识别方法</h3>
+						<div class="paper-links">
+							<a href="https://xueshu.baidu.com/usercenter/paper/show?paperid=1k5m04y0t04e02y0r45h00x0s3119048&site=xueshu_se" target="_blank"><i data-lucide="external-link"></i> 相关链接</a>
+						</div>
+					</div>
+					<div class="paper-time">2023</div>
+				</div>
+
+				<div style="text-align: center; margin-top: 2rem;">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Awards Section -->
+<div id="awards" class="section-wrap section-awards">
+	<div class="section">
+		<div class="awards-content section-content">
+			<h1 data-i18n="awards_title">获奖经历</h1>
+			<div class="awards-container">
+				<div class="awards-group fade fade1">
+					<div class="group-header">
+						<i data-lucide="trophy"></i>
+						<h2 data-i18n="awards_competition">竞赛奖项</h2>
+					</div>
+					<table class="awards-table">
+						<thead>
+							<tr><th data-i18n="awards_time">时间</th><th data-i18n="awards_name">奖项名称</th><th data-i18n="awards_level">获奖等级</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>2025.10.17</td><td>“华为杯”第七届中国研究生人工智能创新大赛</td><td>全国三等奖</td></tr>
+							<tr><td>2025.07.04</td><td>华中科技大学研究生人工智能创新大赛</td><td>校第二名</td></tr>
+							<tr><td>2024.10</td><td>全国研究生机器人创新大赛</td><td>全国三等奖（负责人）</td></tr>
+							<tr><td>2024.09.23</td><td>全国人工智能应用场景创新挑战赛</td><td>二等奖（负责人）</td></tr>
+							<tr><td>2024.07.02</td><td>华中科技大学研究生人工智能创新大赛</td><td>校第二名</td></tr>
+							<tr><td>2022.07.10</td><td>第十七届全国大学生交通运输科技大赛</td><td>全国二等奖</td></tr>
+							<tr><td>2022.06</td><td>中南大学2022年寒假创新创业教育实践活动短视频制作类</td><td>中南大学二等奖</td></tr>
+							<tr><td>2022.05</td><td>中南大学交通运输科技大赛</td><td>校级一等奖</td></tr>
+							<tr><td>2022.04</td><td>中南大学升华杯大学生创业计划竞赛</td><td>铜奖</td></tr>
+							<tr><td>2021.12.26</td><td>第五届湖南省物联网应用创新设计大赛</td><td>一等奖（全省第五）</td></tr>
+							<tr><td>2021.10</td><td>第四届嵌入式芯片与系统设计竞赛</td><td>中部赛区二等奖</td></tr>
+							<tr><td>2021.10</td><td>2021年中南大学第五届物联网应用创新设计竞赛</td><td>校一等奖</td></tr>
+							<tr><td>2021.09</td><td>2021年湖南省全国大学生数学建模竞赛</td><td>湖南省三等奖</td></tr>
+							<tr><td>2021.04.23</td><td>2021年美国国际大学生数学建模竞赛</td><td>一等奖（M奖）</td></tr>
+							<tr><td>2017</td><td>第四届“北大培文杯”全国青少年创意写作大赛</td><td>河南赛区二等奖</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="awards-group fade fade2">
+					<div class="group-header">
+						<i data-lucide="medal"></i>
+						<h2 data-i18n="awards_scholarship">奖学金及其他荣誉</h2>
+					</div>
+					<table class="awards-table">
+						<thead>
+							<tr><th data-i18n="awards_time">时间</th><th data-i18n="awards_name">奖项名称</th><th data-i18n="awards_remark">备注</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>2025.12.08</td><td>华中科技大学比亚迪社会奖学金</td><td>硕士仅两个、2W</td></tr>
+							<tr><td>2025.09.26</td><td>华中科技大学三好学生荣誉称号</td><td></td></tr>
+							<tr><td>2024.12</td><td>华中科技大学研究生二等学业奖学金</td><td></td></tr>
+							<tr><td>2023.12</td><td>华中科技大学研究生一等学业奖学金</td><td></td></tr>
+							<tr><td>2023.03</td><td>中南大学优秀毕业生</td><td></td></tr>
+							<tr><td>2022.12</td><td>国家励志奖学金</td><td></td></tr>
+							<tr><td>2022.12</td><td>中南大学学年二等奖学金</td><td></td></tr>
+							<tr><td>2021.12.31</td><td>国家奖学金</td><td>(7/395)</td></tr>
+							<tr><td>2021.11</td><td>中南大学特等奖学金</td><td>(3/395)</td></tr>
+							<tr><td>2021.12</td><td>中南大学“优秀学生”</td><td></td></tr>
+							<tr><td>2020.12</td><td>中南大学“优秀学生”</td><td></td></tr>
+							<tr><td>2020.12</td><td>中南大学企业奖比亚迪奖学金</td><td>本科仅一个</td></tr>
+							<tr><td>2020.12</td><td>中南大学学年一等奖学金</td><td></td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Contact Section -->
 <div id="contact" class="section-wrap section-contact">
 	<div class="section">
-		<div class="contact-content clearfix section-content">
-			<h1>联系本人</h1>
-			<div class="left">
-				<div class="contact-ways fade fade1">
-					<h2>社交网络</h2>
+		<div class="contact-content section-content">
+			<h1 class="center" data-i18n="contact_title">联系本人</h1>
+			<div class="contact-grid">
+				<div class="contact-card fade fade1">
+					<div class="card-icon"><i data-lucide="mail"></i></div>
+					<h2 data-i18n="contact_social">社交网络</h2>
 					<ul>
-						<li>日常邮箱：<a target="_blank" href="chaozew6@gmail.com">chaozew6@gmail.com</a></li>
-						<li>学校邮箱：<a target="_blank" href="wangcz@hust.edu.cn">wangcz@hust.edu.cn</a></li>
-						<li>Github：<a target="_blank" href="https://github.com/nyzhhd">@nyzhhd</a></li>
-						<li>CSDN：<a target="_blank" href="https://blog.csdn.net/m0_51738372">@石去皿</a></li>
-						<li>好朋友：<a target="_blank" href="http://suink.cn">@Suink</a><a target="_blank" href="https://www.jiajie.me/">@Jiajie</a></li>
-			<!--			<li>小程序: <a href="index2.html" class="contact-info fade fade2">检讨书</a></li>、<a target="_blank" href="https://www.jiajie.me/">@Jiajie</a> -->
+						<li><i data-lucide="user-check"></i> <span data-i18n="contact_party">中共党员</span></li>
+						<li><i data-lucide="mail"></i> <a href="mailto:wangcz@hust.edu.cn">wangcz@hust.edu.cn</a></li>
+						<li><i data-lucide="github"></i> <a href="https://github.com/nyzhhd">nyzhhd</a></li>
+						<li><i data-lucide="book"></i> <a href="https://blog.csdn.net/m0_51738372">石去皿 (CSDN)</a></li>
+						<li><i data-lucide="users"></i> <span data-i18n="contact_friends_list">好朋友：@Suink @Jiajie</span></li>
 					</ul>
-					<div class="contact-info fade fade1"></div>
-					<h2>个人爱好</h2>
-					<ul>
-						<li><strong>铁腚</strong>：骑公路车，最长单日骑行200km+，累计1kkm+。</li>
-						<li><strong>远方</strong>：高德点亮百余城，珠峰大本营、南迦巴瓦峰、纳木错、泰山、武功山、天文台...</li>
-				</ul>
 				</div>
-				
+				<div class="contact-card fade fade2">
+					<div class="card-icon"><i data-lucide="bot"></i></div>
+					<h2 data-i18n="contact_summary">项目发展</h2>
+					<p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9375rem;" data-i18n="contact_robotics">专注于智能机器人领域的深度学习应用：</p>
+					<ul>
+						<li data-i18n="contact_project_1">目标识别、分割与 6D 位姿估计</li>
+						<li data-i18n="contact_project_2">单/双机械臂智能抓取与精密装配</li>
+						<li data-i18n="contact_project_3">扩散模型轨迹规划与生成</li>
+						<li data-i18n="contact_project_4">基于 2D/3D 视觉的多模态缺陷检测</li>
+						<li data-i18n="contact_project_5">端到端机器人操控模型 (VLA)</li>
+					</ul>
+				</div>
+				<div class="contact-card fade fade3">
+					<div class="card-icon"><i data-lucide="compass"></i></div>
+					<h2 data-i18n="contact_hobbies">评价与爱好</h2>
+					<ul>
+						<li data-i18n="contact_eval_1"><strong>综合素质</strong>：中共党员，英语六级 (503)，具备良好的团队协作与抗压能力。</li>
+						<li data-i18n="contact_eval_2"><strong>技术热情</strong>：对 AI 算法与机器人前沿技术有浓厚兴趣，乐于探索端到端操控与多模态模型。</li>
+						<li data-i18n="contact_eval_3"><strong>个人爱好</strong>：热爱骑行（单日 200km+）、摄影与旅行，已点亮百余城市，追求极致的探索精神。</li>
+					</ul>
+				</div>
 			</div>
-		<div class="right fade fade3">
-				 
-				<h2>项目概括</h2>
-				<p>如果你有智能机器人的学习需求，可以联系我交流，目前我主要做：</p>
-				<ul>
-					<li>使用深度学习模型进行目标识别、分割、位姿估计等。</li>
-					<li>使用单机械臂/双机械臂进行目标抓取、装配等。</li>
-					<li>使用扩散模型进行样本生成/轨迹规划/估计位姿等。</li>
-					<li>基于2D/3D的相似度比较进行缺陷检测等。</li>
-					<li>多模态端到端模型进行机器人的控制（视觉+语言+力觉+动作,VLFA）。</li>
-					<li>对于智能机器人，我也有一些同行朋友可以推荐，也欢迎咨询！</li>
-				</ul>
-					
-				
-			<div class="contact-info fade fade2">
-				<!--<h2>本站声明</h2>-->
-				<p>欢迎大家通过以上任意方式联系我进行交流。</p>
-				<p>本站设计参照<a href="https://github.com/yujiangshui" target="_blank"> Jiangshui </a> 。因此十分感谢他的开源项目。本站源代码他已经公开在 github 上面，欢迎 fork 学习。</p>
-			</div></div> 
-			<!--	合作交流：通过以上任意方式可以联系我交流。
-
-			价格参考：视具体项目难度、工作量和合作深度等。-->
+			<div class="sponsor-container fade fade4">
+				<p class="sponsor-text" data-i18n="sponsor_text">如果您觉得我的工作对您有所帮助，或者想要支持我的开源项目，欢迎通过赞赏来鼓励我继续创作。每一份支持都是我前进的动力。</p>
+				<a class="sponsor-btn" href="zsm.html" target="_blank">
+					<i data-lucide="heart"></i>
+					<span data-i18n="sponsor_btn">赞赏作者</span>
+				</a>
+			</div>
 		</div>
-		<a class="more-link" href="zsm.html">赞赏作者</a>
-		<!--<a  href="https://smms.app/image/O2A1M9nzqYcG3Cr" target="_blank" style="text-align:center"><img src="https://s2.loli.net/2022/11/22/O2A1M9nzqYcG3Cr.jpg" alt="zsm.jpg" width="100" height="100">	</a>  -->  
 	</div>
 </div>
 
@@ -223,6 +524,9 @@
 
 <script type="text/javascript" src="./js/jquery-1.9.1.min.js"></script>
 <script src="js/global.js"></script>
+<script>
+	lucide.createIcons();
+</script>
 
 </body>
 </html>
